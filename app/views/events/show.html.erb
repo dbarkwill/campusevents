@@ -19,39 +19,36 @@
   <strong>Url:</strong>
   <%= @event.url %>
 </p>
-<p>
-	<strong>Sponsors:</strong><br>
-	<% @event.sponsors.all.each do |s| %>
-        <%= s.name %> <br>
-    <% end %>
-</p>
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
 
 <% content_for :sidebar do %>
-<% if @event.meetings.count != 0 %>
-	<h3>Meetings:</h3><br>
-	<table id="table-design">
-	  <thead>
-	    <tr>
-	      <th>Name</th>
-	      <th>Start time</th>
-	      <th>End time</th>
-	      <th>Location</th>
-	    </tr>
-	  </thead>
+	<% if @event.meetings.count != 0 %>
+		<h3>Meetings:</h3><br>
+		<table id="table-design">
+		  <thead>
+		    <tr>
+		      <th>Name</th>
+		      <th>Start time</th>
+		      <th>End time</th>
+		      <th>Location</th>
+		    </tr>
+		  </thead>
 
-	  <tbody>
-	    <% @event.meetings.each do |meeting| %>
-	      <tr>
-	        <td><%= meeting.name %></td>
-	        <td><%= meeting.start_time.strftime("%A, %B %d, %Y at %l:%M%p") %></td>
-	        <td><%= meeting.end_time.strftime("%A, %B %d, %Y at %l:%M%p") %></td>
-	        <td><%= meeting.location.name %></td>
-	      </tr>
-	    <% end %>
-	  </tbody>
-	</table>
-<% end %>
+		  <tbody>
+		    <% @event.meetings.each do |meeting| %>
+		      <tr>
+		        <td><%= meeting.name %></td>
+		        <td><%= meeting.start_time.strftime("%A, %B %d, %Y at %l:%M%p") %></td>
+		        <td><%= meeting.end_time.strftime("%A, %B %d, %Y at %l:%M%p") %></td>
+		        <td><%= meeting.location.name %></td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+	<% end %>
+
+	<%= render(partial: "event_sponsors", object: @event) %>
 <% end %>

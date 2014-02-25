@@ -33,3 +33,10 @@
 
 <%= link_to 'Edit', edit_meeting_path(@meeting) %> |
 <%= link_to 'Back', meetings_path %>
+
+<% content_for :sidebar do %>
+  <h3>Location Information:</h3>
+  <ul>
+    <li>Name: <%= @meeting.location.name %></li>
+    <li>Description: <%= @meeting.location.description %></li>
+<% end %>

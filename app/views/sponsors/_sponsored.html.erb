@@ -1,0 +1,9 @@
+<h3>Sponsored Events:</h3>
+
+	<% sponsored.events.each do |e| %>
+		<ul>
+			<li>Event: <%= link_to e.name, e %></li>
+			<li>Start Date: <%= e.start_date %></li>
+			<li>End Date: <%= e.end_date %></li>
+		</ul>
+	<% end %>

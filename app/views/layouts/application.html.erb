@@ -17,7 +17,7 @@
 			<li><%= link_to 'Sponsors', sponsors_path %></li>
 		</ul>
 	</div>
-
+	
 	<div id="header">
 		<h1>
 			Campus Events
@@ -25,15 +25,19 @@
 	</div>
 	
 	<div id="content-container">
-		<div id="content-full">
+
+		<div id="content<%= !content_for?(:sidebar) ? '-full' : '' %>">
 			<%= yield %>
 		</div>
+		<% if content_for?(:sidebar) %>
+			<div id="aside">
+				<%= yield :sidebar %>
+			</div>
+		<% end %>
 		<div id="footer">
 			Copyright © Campus Events, 2014
 		</div>
 	</div>
 </div>
-
-
 </body>
 </html>

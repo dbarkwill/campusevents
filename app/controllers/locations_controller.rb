@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
-  layout "application-sidebar", only: [:show]
+  
 
   # GET /locations
   # GET /locations.json
