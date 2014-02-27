@@ -1,105 +1,34 @@
-body, html {
-	background-color: #FAFAFA;
-	margin: 0;
-}
-#container
-{
-	margin: 0 auto;
-	width: 100%;
+body {
+  padding-top: 50px;
+  margin-bottom: 60px;
 }
 
-#header
-{
-	background: #AC0024;
-	padding: 20px;
-	color: #FAFAFA;
-	padding: 50px;
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-#header h1 { 
-	margin: 0;
-	margin-top: 10px;
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #AC0024;
+  color: #FAFAFA;
 }
 
-#navigation
-{
-	float: left;
-	width: 100%;
-	background: #393838;
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
 }
 
-#navigation ul
-{
-	margin: 0;
-	margin-left: 75px;
-	padding: 0;
-}
-
-#navigation ul li
-{
-	list-style-type: none;
-	display: inline;
-}
-
-#navigation li a
-{
-	display: block;
-	float: left;
-	padding: 5px 10px;
-	color: #fff;
-	text-decoration: none;
-	border-right: 1px solid #393838;
-}
-
-#navigation li a:hover { background: #AC0024; }
-
-#content-container
-{
-	float: left;
-	width: 100%;
-	background: #FAFAFA;
-	padding-bottom: 80px;
-}
-
-#content
-{
-	clear: left;
-	float: left;
-	width: 60%;
-	padding: 20px 0;
-	margin: 0 0 0 4%;
-	display: inline;
-}
-#content-full
-{
-	width: 80%;
-	float: left;
-	padding: 20px;
-	margin: 0 0 0 4%;
-	display: inline;
-}
-
-#content h2 { margin: 0; }
-
-#aside
-{
-	float: right;
-	width: 26%;
-	padding: 20px 0;
-	margin: 0 3% 0 0;
-	display: inline;
-}
-
-#aside h3 { margin: 0; }
-
-#footer
-{
-	clear: both;
-	background: #AC0024;
-	text-align: center;
-	color: #FAFAFA;
-	padding: 20px;
-	position: fixed;
-	bottom: 0px;
-	width: 100%;
+#footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
 }
